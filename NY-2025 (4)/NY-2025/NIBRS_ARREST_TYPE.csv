@@ -1,0 +1,4 @@
+arrest_type_id,arrest_type_code,arrest_type_name
+1,O,On View
+2,S,Summoned / Cited
+3,T,Taken INTO Custody

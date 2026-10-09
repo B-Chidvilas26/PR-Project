@@ -1,0 +1,10 @@
+injury_id,injury_code,injury_name
+1,B,Apparent Broken Bones
+2,I,Possible Internal Injury
+3,L,Severe Laceration
+4,M,Minor Injury
+5,N,None
+6,O,Other Major Injury
+7,T,Loss of Teeth
+8,U,Unconscious
+9,G,Gunshot Wound

@@ -1,0 +1,6 @@
+ethnicity_id,ethnicity_code,ethnicity_name
+10,H,Hispanic or Latino
+20,N,Not Hispanic or Latino
+30,M,Multiple
+40,U,Unknown
+50,X,Not Specified

@@ -1,0 +1,87 @@
+offense_code,offense_name,crime_against,ct_flag,hc_flag,hc_code,offense_category_name,offense_group
+09C,Justifiable Homicide,Person,f,f,  ,Homicide Offenses,A
+09A,Murder and Nonnegligent Manslaughter,Person,f,t,01,Homicide Offenses,A
+09B,Negligent Manslaughter,Person,f,t,  ,Homicide Offenses,A
+11A,Rape,Person,f,t,02,Sex Offenses,A
+11B,Sodomy,Person,f,t,02,Sex Offenses,A
+11C,Sexual Assault With An Object,Person,f,t,02,Sex Offenses,A
+13A,Aggravated Assault,Person,f,t,04,Assault Offenses,A
+23A,Pocket-picking,Property,f,t,  ,Larceny/Theft Offenses,A
+120,Robbery,Property,t,t,03,Robbery,A
+220,Burglary/Breaking & Entering,Property,t,t,05,Burglary/Breaking & Entering,A
+240,Motor Vehicle Theft,Property,t,t,07,Motor Vehicle Theft,A
+100,Kidnapping/Abduction,Person,f,t,  ,Kidnapping/Abduction,A
+200,Arson,Property,f,t,08,Arson,A
+210,Extortion/Blackmail,Property,t,t,  ,Extortion/Blackmail,A
+23*,Not Specified,Property,f,t,06,Larceny/Theft Offenses,A
+13B,Simple Assault,Person,f,t,09,Assault Offenses,A
+13C,Intimidation,Person,f,t,10,Assault Offenses,A
+36A,Incest,Person,f,t,  ,"Sex Offenses, Non-forcible",A
+36B,Statutory Rape,Person,f,t,  ,"Sex Offenses, Non-forcible",A
+370,Pornography/Obscene Material,Society,f,t,  ,Pornography/Obscene Material,A
+40A,Prostitution,Society,f,t,  ,Prostitution Offenses,A
+40B,Assisting or Promoting Prostitution,Society,f,t,  ,Prostitution Offenses,A
+40C,Purchasing Prostitution,Society,f,t,  ,Prostitution Offenses,A
+520,Weapon Law Violations,Society,f,t,  ,Weapon Law Violations,A
+64A,"Human Trafficking, Commercial Sex Acts",Person,f,t,12,Human Trafficking,A
+64B,"Human Trafficking, Involuntary Servitude",Person,f,t,13,Human Trafficking,A
+250,Counterfeiting/Forgery,Property,f,t,  ,Counterfeiting/Forgery,A
+26A,False Pretenses/Swindle/Confidence Game,Property,t,t,  ,Fraud Offenses,A
+49C,Flight to Avoid Deportation,Society,f,t,  ,Other Offenses,A
+49B,Flight to Avoid Prosecution,Society,f,t,  ,Other Offenses,A
+49A,Harboring Escapee/Concealing from Arrest,Society,f,t,  ,Other Offenses,A
+360,Failure to Register as a Sex Offender,Society,f,t,  ,Other Offenses,A
+101,Treason,Society,f,t,  ,Other Offenses,A
+103,Espionage,Society,f,t,  ,Other Offenses,A
+90A,Bad Checks,Property,f,f,  ,Bad Checks,B
+30A,Illegal Entry into the United States,Society,f,t,  ,Other Offenses,A
+30B,False Citizenship,Society,f,t,  ,Other Offenses,A
+30C,Smuggling Aliens,Society,f,t,  ,Other Offenses,A
+30D,Re-entry after Deportation,Society,f,t,  ,Other Offenses,A
+720,Animal Cruelty,Society,f,t,  ,Animal Cruelty,A
+90B,Curfew/Loitering/Vagrancy Violations,Society,f,f,  ,Curfew/Loitering/Vagrancy Violations,B
+90C,Disorderly Conduct,Society,f,f,  ,Disorderly Conduct,B
+11D,Criminal Sexual Contact,Person,f,t,02,Sex Offenses,A
+26B,Credit Card/Automated Teller Machine Fraud,Property,t,t,  ,Fraud Offenses,A
+26C,Impersonation,Property,t,t,  ,Fraud Offenses,A
+26D,Welfare Fraud,Property,f,t,  ,Fraud Offenses,A
+26E,Wire Fraud,Property,t,t,  ,Fraud Offenses,A
+26F,Identity Theft,Property,t,t,  ,Fraud Offenses,A
+26G,Hacking/Computer Invasion,Property,t,t,  ,Fraud Offenses,A
+270,Embezzlement,Property,t,t,  ,Embezzlement,A
+280,Stolen Property Offenses,Property,f,t,  ,Stolen Property Offenses,A
+290,Destruction/Damage/Vandalism of Property,Property,f,t,11,Destruction/Damage/Vandalism of Property,A
+35A,Drug/Narcotic Violations,Society,f,t,  ,Drug/Narcotic Offenses,A
+35B,Drug Equipment Violations,Society,f,t,  ,Drug/Narcotic Offenses,A
+39A,Betting/Wagering,Society,f,t,  ,Gambling Offenses,A
+39B,Operating/Promoting/Assisting Gambling,Society,f,t,  ,Gambling Offenses,A
+39C,Gambling Equipment Violation,Society,f,t,  ,Gambling Offenses,A
+39D,Sports Tampering,Society,f,t,  ,Gambling Offenses,A
+510,Bribery,Property,t,t,  ,Bribery,A
+58B,Export Violations,Society,f,t,  ,Other Offenses,A
+90D,Driving Under the Influence,Society,f,f,  ,Driving Under the Influence,B
+90E,Drunkenness,Society,f,f,  ,Drunkenness,B
+90F,"Family Offenses, Nonviolent",Person,f,f,  ,"Family Offenses, Nonviolent",B
+90G,Liquor Law Violations,Society,f,f,  ,Liquor Law Violations,B
+90H,Peeping Tom,Person,f,f,  ,Peeping Tom,B
+90J,Trespass of Real Property,Society,f,f,  ,Trespass of Real Property,B
+90Z,All Other Offenses,Society,f,f,  ,All Other Offenses,B
+90K,Failure to Appear,Society,f,f,  ,Other Offenses,B
+90L,Federal Resource Violations,Society,f,f,  ,Other Offenses,B
+90M,Perjury,Society,f,f,  ,Other Offenses,B
+90I,Runaway,Not a Crime,f,f,  ,Other Offenses, 
+58A,Import Violations,Society,f,t,  ,Other Offenses,A
+61A,Federal Liquor Offenses,Society,f,t,  ,Other Offenses,A
+61B,Federal Tobacco Offenses,Society,f,t,  ,Other Offenses,A
+26H,Money Laundering,Society,f,t,  ,Other Offenses,A
+620,Wildlife Trafficking,Society,f,t,  ,Other Offenses,A
+526,Explosives Violation,Society,f,t,  ,Other Offenses,A
+522,Weapons of Mass Destruction,Society,f,t,  ,Other Offenses,A
+521,Violation of National Firearm Act of 1934,Society,f,t,  ,Other Offenses,A
+23B,Purse-snatching,Property,f,t,  ,Larceny/Theft Offenses,A
+23C,Shoplifting,Property,f,t,  ,Larceny/Theft Offenses,A
+23D,Theft From Building,Property,t,t,  ,Larceny/Theft Offenses,A
+23E,Theft From Coin-Operated Machine or Device,Property,f,t,  ,Larceny/Theft Offenses,A
+23F,Theft From Motor Vehicle,Property,t,t,  ,Larceny/Theft Offenses,A
+23G,Theft of Motor Vehicle Parts or Accessories,Property,f,t,  ,Larceny/Theft Offenses,A
+23H,All Other Larceny,Property,t,t,  ,Larceny/Theft Offenses,A

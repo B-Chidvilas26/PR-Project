@@ -1,0 +1,43 @@
+weapon_id,weapon_code,weapon_name,shr_flag
+1,01,Firearm,f
+2,02,Handgun,f
+3,03,Rifle,f
+4,04,Shotgun,f
+5,05,Other Firearm,f
+21,11,Firearm,t
+22,12,Handgun,t
+23,13,Rifle,t
+24,14,Shotgun,t
+25,15,Other Firearm,t
+6,01A,Firearm (Automatic),f
+7,02A,Handgun (Automatic),f
+8,03A,Rifle (Automatic),f
+9,04A,Shotgun (Automatic),f
+10,05A,Other Firearm (Automatic),f
+31,20,Knife/Cutting Instrument,t
+32,30,Blunt Object,t
+33,35,Motor Vehicle/Vessel,f
+34,50,Poison,t
+35,60,Explosives,t
+36,65,Fire/Incendiary Device,t
+37,70,Drugs/Narcotics/Sleeping Pills,t
+38,85,Asphyxiation,t
+41,40,Personal Weapons,t
+39,90,Other,t
+40,95,Unknown,f
+42,99,None,f
+26,11A,Firearm (Automatic),f
+27,12A,Handgun (Automatic),f
+28,13A,Rifle (Automatic),f
+29,14A,Shotgun (Automatic),f
+30,15A,Other Firearm (Automatic),f
+11,06,Firearm,f
+12,07,Handgun,f
+13,08,Rifle,f
+14,09,Shotgun,f
+15,10,Other Firearm,f
+16,06A,Firearm (Automatic),f
+17,07A,Handgun (Automatic),f
+18,08A,Rifle (Automatic),f
+19,09A,Shotgun (Automatic),f
+20,10A,Other Firearm (Automatic),f

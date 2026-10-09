@@ -1,0 +1,13 @@
+race_id,race_code,race_desc,sort_order,start_year,end_year,notes
+98,U,Unknown,98,,,Race is explicitly unknown
+10,W,White,10,,,""
+20,B,Black or African American,20,,,""
+30,I,American Indian or Alaska Native,30,,,""
+40,A,Asian,40,2013,,Includes Asian Indian
+41,AP,"Asian, Native Hawaiian, or Other Pacific Islander",41,1980,2012,Includes Asian Indian
+42,C,Chinese,42,1960,1979,""
+43,J,Japanese,43,1960,1979,""
+50,P,Native Hawaiian or Other Pacific Islander,50,2013,,""
+60,O,Other,60,1960,1979,Includes Native Hawaiian or Other Pacific Islander and Asian Indian
+70,M,Multiple,70,,,Used for groups with multiple races
+99,NS,Not Specified,99,,,Race is not specified

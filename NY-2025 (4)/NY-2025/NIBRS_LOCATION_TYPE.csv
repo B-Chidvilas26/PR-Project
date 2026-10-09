@@ -1,0 +1,48 @@
+location_id,location_code,location_name
+1,37,Abandoned/Condemned Structure
+2,01,Air/Bus/Train Terminal
+3,38,Amusement Park
+4,39,Arena/Stadium/Fairgrounds/Coliseum
+5,40,ATM Separate from Bank
+6,41,Auto Dealership New/Used
+7,02,Bank/Savings and Loan
+8,03,Bar/Nightclub
+9,42,Camp/Campground
+10,04,Church/Synagogue/Temple/Mosque
+11,05,Commercial/Office Building
+12,57,Community Center
+13,06,Construction Site
+14,07,Convenience Store
+15,58,Cyberspace
+16,44,Daycare Facility
+17,08,Department/Discount Store
+18,45,Dock/Wharf/Freight/Modal Terminal
+19,09,Drug Store/Doctor's Office/Hospital
+20,46,Farm Facility
+21,10,Field/Woods
+22,47,Gambling Facility/Casino/Race Track
+23,11,Government/Public Building
+24,12,Grocery/Supermarket
+25,13,Highway/Road/Alley/Street/Sidewalk
+26,14,Hotel/Motel/Etc.
+27,48,Industrial Site
+28,15,Jail/Prison/Penitentiary/Corrections Facility
+29,16,Lake/Waterway/Beach
+30,17,Liquor Store
+31,49,Military Installation
+32,50,Park/Playground
+33,18,Parking/Drop Lot/Garage
+34,19,Rental Storage Facility
+35,20,Residence/Home
+36,51,Rest Area
+37,21,Restaurant
+38,22,School/College
+39,52,School-College/University
+40,53,School-Elementary/Secondary
+41,23,Service/Gas Station
+42,54,Shelter-Mission/Homeless
+43,55,Shopping Mall
+44,24,Specialty Store
+45,56,Tribal Lands
+98,25,Other/Unknown
+99,00,Not Specified

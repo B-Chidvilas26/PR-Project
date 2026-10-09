@@ -1,0 +1,44 @@
+# Node / Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+.vite/
+
+# Python / Backend
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# SQLite temporary files
+*.db-shm
+*.db-wal
+*.db-journal
+
+# Raw multi-megabyte NIBRS table dumps (models, burglary_* datasets, and lookup CSVs are tracked)
+NY-2025 (4)/NY-2025/NIBRS_incident.csv
+NY-2025 (4)/NY-2025/NIBRS_month.csv
+NY-2025 (4)/NY-2025/NIBRS_VICTIM.csv
+NY-2025 (4)/NY-2025/NIBRS_OFFENDER.csv
+NY-2025 (4)/NY-2025/NIBRS_OFFENSE.csv
+NY-2025 (4)/NY-2025/NIBRS_VICTIM_OFFENSE.csv
+NY-2025 (4)/NY-2025/NIBRS_ARRESTEE.csv
+NY-2025 (4)/NY-2025/NIBRS_VICTIM_OFFENDER_REL.csv
+NY-2025 (4)/NY-2025/NIBRS_PROPERTY_DESC.csv
+NY-2025 (4)/NY-2025/NIBRS_BIAS_MOTIVATION.csv
+NY-2025 (4)/NY-2025/NIBRS_PROPERTY.csv
+NY-2025 (4)/NY-2025/NIBRS_SUSPECT_USING.csv
+NY-2025 (4)/NY-2025/NIBRS_CRIMINAL_ACT.csv
+NY-2025 (4)/NY-2025/NIBRS_ARRESTEE_WEAPON.csv
+NY-2025 (4)/NY-2025/NIBRS_WEAPON.csv
+NY-2025 (4)/NY-2025/NIBRS_VICTIM_INJURY.csv
+NY-2025 (4)/NY-2025/NIBRS_ARRESTEE_GROUPB.csv
+NY-2025 (4)/NY-2025/NIBRS_SUSPECTED_DRUG.csv
+NY-2025 (4)/NY-2025/NIBRS_ARRESTEE_GROUPB_WEAPON.csv
+
+# OS / IDE
+.DS_Store
+Thumbs.db

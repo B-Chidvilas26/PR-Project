@@ -1,0 +1,69 @@
+prop_desc_id,prop_desc_name,prop_desc_code
+1,Aircraft,01
+2,Alcohol,02
+3,Automobile,03
+4,Bicycles,04
+5,Buses,05
+6,Clothes/ Furs,06
+7,Computer Hard/ Software,07
+8,Consumable Goods,08
+9,Credit/ Debit cards,09
+10,Drugs/ Narcotics,10
+11,Drug Equipment,11
+12,Farm Equipment,12
+13,Firearms,13
+14,Gambling Equipment,14
+15,Industrial Equipment,15
+16,Household Goods,16
+17,Jewelry/ Precious Metals,17
+18,Livestock,18
+19,Merchandise,19
+20,Money,20
+21,Negotiable Instruments,21
+22,Non Negotiable Instruments,22
+23,Office Equipment,23
+24,Other Motor Vehicles,24
+25,Purse/ Wallet,25
+26,Radio/ TV/ VCR,26
+27,Recordings,27
+28,Recreational Vehicles,28
+29,Structure/ Single dwelling,29
+30,Structure/ Other residence,30
+31,Structure/ Other commercial,31
+32,Structure/ Other industrial,32
+33,Structure/ Public,33
+34,Structure/ Storage,34
+35,Structure/ Other,35
+36,Tools,36
+37,Trucks,37
+38,Vehicle Parts,38
+39,Watercraft,39
+40,Aircraft Parts/ Accessories,41
+41,Artistic Supplies/ Accessories,42
+42,Building Materials,43
+43,Camping/ Hunting/ Fishing Equipment/ Supplies,44
+44,Chemicals,45
+45,Collections/ Collectibles,46
+46,Crops,47
+47,Documents/ Personal or Business,48
+48,Explosives,49
+49,Firearm Accessories,59
+50,Fuel,64
+51,Identity Documents,65
+52,Identity-Intangible,66
+53,Law Enforcement Equipment,67
+54,Lawn/ Yard/ Garden Equipment,68
+55,Logging Equipment,69
+56,Medical/ Medical Lab Equipment,70
+57,"Metals, Non-Precious",71
+58,Musical Instruments,72
+59,Pets,73
+60,Photographic/ Optical Equipment,74
+61,Portable Electronic Communications,75
+62,Recreational/ Sports Equipment,76
+63,Other,77
+64,Trailers,78
+65,Watercraft Equipment/ Parts/ Accessories,79
+66,Weapons-Other,80
+67,Pending Inventory,88
+68,Special,99
