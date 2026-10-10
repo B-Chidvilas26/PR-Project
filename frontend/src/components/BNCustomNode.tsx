@@ -42,21 +42,21 @@ export const BNCustomNode: React.FC<{ data: BNCustomNodeData }> = ({ data }) => 
 
   const entropyLevel = inference?.entropy?.uncertainty_level || meta.prior_entropy.uncertainty_level;
 
-  let ringClass = 'border-slate-700/90 hover:border-slate-500';
+  let ringClass = 'border-slate-700/80 hover:border-slate-500 hover:shadow-lg';
   if (isSelected) {
-    ringClass = 'border-blue-400 ring-2 ring-blue-500/50 shadow-blue-500/20';
+    ringClass = 'border-sky-400 ring-2 ring-sky-400/60 shadow-[0_0_20px_rgba(56,189,248,0.35)]';
   } else if (highlightRole === 'parent') {
-    ringClass = 'border-sky-400 ring-2 ring-sky-400/50';
+    ringClass = 'border-sky-400 ring-2 ring-sky-400/50 shadow-md';
   } else if (highlightRole === 'child') {
-    ringClass = 'border-emerald-400 ring-2 ring-emerald-400/50';
+    ringClass = 'border-emerald-400 ring-2 ring-emerald-400/50 shadow-md';
   } else if (highlightRole === 'spouse') {
-    ringClass = 'border-amber-400 ring-2 ring-amber-400/50';
+    ringClass = 'border-amber-400 ring-2 ring-amber-400/50 shadow-md';
   } else if (isEvidence) {
     ringClass = isUnknownEvidence
-      ? 'border-amber-500/90 ring-1 ring-amber-500/30'
-      : 'border-blue-500/90 ring-1 ring-blue-500/40';
+      ? 'border-amber-400 ring-2 ring-amber-500/60 shadow-[0_0_18px_rgba(245,158,11,0.35)]'
+      : 'border-emerald-400 ring-2 ring-emerald-500/60 shadow-[0_0_18px_rgba(16,185,129,0.35)]';
   } else if (isQueryTarget) {
-    ringClass = 'border-purple-400/90 ring-1 ring-purple-500/40';
+    ringClass = 'border-purple-400 ring-2 ring-purple-500/60 shadow-[0_0_18px_rgba(168,85,247,0.35)]';
   }
 
   const opacityClass = highlightRole === 'dimmed' ? 'opacity-35' : 'opacity-100';

@@ -40,6 +40,8 @@ import {
   ArrowUpRight,
   ArrowDownRight,
   Layers,
+  Maximize2,
+  Minimize2,
 } from 'lucide-react';
 
 import {
@@ -53,6 +55,8 @@ import { api } from '../api';
 import { BNCustomNode } from './BNCustomNode';
 import { TooltipBadge } from './TooltipBadge';
 import { SourceBadge } from './SourceBadge';
+import { ForensicBriefingCard } from './ForensicBriefingCard';
+import { RapidWhatIfChips } from './RapidWhatIfChips';
 
 const nodeTypes = {
   bnNode: BNCustomNode,
@@ -109,6 +113,8 @@ interface GraphWorkspaceProps {
   }) => void;
   isInferring: boolean;
   presets: PresetScenario[];
+  isZenMode?: boolean;
+  onToggleZenMode?: () => void;
 }
 
 export const GraphWorkspace: React.FC<GraphWorkspaceProps> = ({
@@ -121,6 +127,8 @@ export const GraphWorkspace: React.FC<GraphWorkspaceProps> = ({
   onRunInference,
   isInferring,
   presets,
+  isZenMode,
+  onToggleZenMode,
 }) => {
   const flowWrapperRef = useRef<HTMLDivElement | null>(null);
   const [rfInstance, setRfInstance] = useState<ReactFlowInstance | null>(null);
@@ -352,6 +360,16 @@ export const GraphWorkspace: React.FC<GraphWorkspaceProps> = ({
     }
   };
 
+  const handleToggleWhatIf = (nodeId: string, value: string) => {
+    const next = { ...evidence };
+    if (next[nodeId] === value) {
+      delete next[nodeId];
+    } else {
+      next[nodeId] = value;
+    }
+    onChangeEvidence(next);
+  };
+
   const selectedMeta = useMemo(
     () => graph.nodes.find((n) => n.id === selectedNodeId) || null,
     [graph.nodes, selectedNodeId]
@@ -457,6 +475,21 @@ export const GraphWorkspace: React.FC<GraphWorkspaceProps> = ({
           >
             <Download className="w-3.5 h-3.5" /> SVG
           </button>
+
+          {onToggleZenMode && (
+            <button
+              onClick={onToggleZenMode}
+              className={`px-2.5 py-1.5 rounded-lg border text-xs inline-flex items-center gap-1 transition cursor-pointer ${
+                isZenMode
+                  ? 'bg-blue-600 border-blue-400 text-white font-semibold shadow-md'
+                  : 'bg-slate-800 border-slate-700 text-slate-200 hover:bg-slate-700'
+              }`}
+              title={isZenMode ? 'Exit Focus Mode (Show Workflow)' : 'Focus Mode (Maximize Canvas)'}
+            >
+              {isZenMode ? <Minimize2 className="w-3.5 h-3.5" /> : <Maximize2 className="w-3.5 h-3.5" />}
+              {isZenMode ? 'Exit Focus' : 'Focus Mode'}
+            </button>
+          )}
         </div>
 
         {/* Right Side: Query Variable Selector, Exact/Gibbs Toggle & Run Reconstruction Button */}
@@ -562,10 +595,27 @@ export const GraphWorkspace: React.FC<GraphWorkspaceProps> = ({
         </div>
       </div>
 
+      {/* Rapid What-If Evidence Chips Bar */}
+      <RapidWhatIfChips
+        evidence={evidence}
+        onToggleEvidence={handleToggleWhatIf}
+        onClearAll={() => onChangeEvidence({})}
+      />
+
       {/* Main Split Area: Left Canvas + Right Node Inspector Side Panel */}
       <div className="flex-1 flex min-h-0 relative overflow-hidden">
         {/* React Flow Canvas */}
         <div ref={flowWrapperRef} className="flex-1 h-full relative bg-slate-950">
+          {/* Floating Live Forensic Case Briefing Card */}
+          <div className="absolute top-3 left-3 z-10 max-w-xl w-[calc(100%-24px)] sm:w-[500px] pointer-events-auto">
+            <ForensicBriefingCard
+              inferenceResult={inferenceResult}
+              graph={graph}
+              evidence={evidence}
+              onSelectNode={(nodeId) => setSelectedNodeId(nodeId)}
+            />
+          </div>
+
           <ReactFlow
             nodes={nodes}
             edges={edges}

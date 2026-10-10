@@ -14,6 +14,8 @@ import {
   PlusCircle,
   Save,
   Check,
+  Maximize2,
+  Minimize2,
 } from 'lucide-react';
 
 import {
@@ -115,6 +117,14 @@ export const App: React.FC = () => {
   const [customCompareScenarios, setCustomCompareScenarios] = useState<
     Array<{ name: string; evidence: Record<string, string> }> | undefined
   >(undefined);
+  const [isZenMode, setIsZenMode] = useState<boolean>(false);
+
+  // Quick KPI metrics from inferenceResult
+  const attemptResult = inferenceResult?.nodes?.['attempt_completed'];
+  const topOutcomeLabel = attemptResult?.top_state?.label || 'Completed';
+  const topOutcomeProb = Math.round((attemptResult?.top_state?.posterior ?? 0.95) * 100);
+  const activeCluesCount = Object.keys(currentCase.manual_evidence).length;
+  const uncertaintyLevel = attemptResult?.entropy?.uncertainty_level || 'Low';
 
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -310,6 +320,35 @@ export const App: React.FC = () => {
           </div>
         </div>
 
+        {/* Top-Line Executive KPI Summary Pill Bar */}
+        <div className="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-950/80 border border-slate-800 text-[11px]">
+          <div className="flex items-center gap-1.5 pr-2.5 border-r border-slate-800">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="text-slate-400">Reconstruction:</span>
+            <span className="font-bold text-slate-100 font-mono">
+              {topOutcomeLabel} {topOutcomeProb}%
+            </span>
+          </div>
+          <div className="flex items-center gap-1.5 pr-2.5 border-r border-slate-800">
+            <span className="text-slate-400">Active Clues:</span>
+            <span className="font-bold text-blue-300 font-mono">{activeCluesCount} / 20</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <span className="text-slate-400">Uncertainty:</span>
+            <span
+              className={`font-semibold ${
+                uncertaintyLevel === 'Low'
+                  ? 'text-emerald-400'
+                  : uncertaintyLevel === 'Medium'
+                  ? 'text-amber-400'
+                  : 'text-rose-400'
+              }`}
+            >
+              {uncertaintyLevel}
+            </span>
+          </div>
+        </div>
+
         {/* Center/Right: View Tabs & Case / Demo Controls */}
         <div className="flex flex-wrap items-center gap-2">
           {/* Primary Analytical Tabs */}
@@ -386,6 +425,19 @@ export const App: React.FC = () => {
           </button>
 
           <button
+            onClick={() => setIsZenMode((z) => !z)}
+            className={`px-2.5 py-1.5 rounded-lg border text-xs inline-flex items-center gap-1 transition cursor-pointer ${
+              isZenMode
+                ? 'bg-blue-600 border-blue-400 text-white font-semibold shadow-md'
+                : 'bg-slate-800 border-slate-700 text-slate-200 hover:bg-slate-700'
+            }`}
+            title={isZenMode ? 'Exit Focus Mode (Show Sidebar)' : 'Focus Mode (Maximize Canvas)'}
+          >
+            {isZenMode ? <Minimize2 className="w-3.5 h-3.5" /> : <Maximize2 className="w-3.5 h-3.5" />}
+            <span className="hidden sm:inline">{isZenMode ? 'Exit Focus' : 'Focus Mode'}</span>
+          </button>
+
+          <button
             onClick={handleSaveCaseToBackend}
             className="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold inline-flex items-center gap-1 cursor-pointer"
           >
@@ -447,7 +499,9 @@ export const App: React.FC = () => {
         {/* Left Guided Workflow Stepper (CORE FEATURE 5) */}
         <nav
           aria-label="Guided Workflow Steps"
-          className="w-60 bg-slate-900/95 border-r border-slate-800 p-3 flex flex-col justify-between shrink-0 no-print"
+          className={`${
+            isZenMode ? 'hidden' : 'w-60'
+          } bg-slate-900/95 border-r border-slate-800 p-3 flex flex-col justify-between shrink-0 no-print transition-all duration-200`}
         >
           <div className="space-y-1">
             <div className="px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-400">
@@ -571,6 +625,8 @@ export const App: React.FC = () => {
                     onRunInference={triggerInference}
                     isInferring={isInferring}
                     presets={presets}
+                    isZenMode={isZenMode}
+                    onToggleZenMode={() => setIsZenMode((z) => !z)}
                   />
                 </div>
               )}
